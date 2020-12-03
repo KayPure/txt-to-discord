@@ -1,0 +1,21 @@
+{
+  "name": "txt-to-discord",
+  "version": "1.0.0",
+  "description": "a small discord bot that sends the content of an txt file on change into a discord channel. using it to push live playlists from traktor into my discord",
+  "main": "playlist.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "discord",
+    "textfile",
+    "txt"
+  ],
+  "author": "KayPure",
+  "license": "ISC",
+  "dependencies": {
+    "date-and-time": "^0.14.1",
+    "discord.js": "^12.5.1",
+    "fs": "^0.0.1-security"
+  }
+}
