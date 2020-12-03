@@ -1,6 +1,6 @@
 # txt-to-discord #
 
-a little javascript that read the last line of a txt file, and post it in a specific discord channel. 
+a little javascript that read the last line of a txt file and post it in a specific discord channel. 
 every filechange triggers the script.
 
 i wrote this little script to do a live playlist of my dj sets on discord. at the moment im using native instruments traktor with an second app, that reads the metadata of a played track and store it in a text file.
