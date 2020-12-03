@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const fs = require('fs');
 const date = require('date-and-time');
-
+const readLastLines = require('read-last-lines');
 const bot = new Discord.Client();
 const now = new Date();
 
@@ -12,21 +12,13 @@ var playlist = "nowplaying.txt"
 
 bot.on("ready", function () {
 	console.log("ready");
-	console.log("Stream starded on - " + date.format(now, 'DD/MM/YYYY ') + ("starting live Playlist...."));
-		bot.channels.cache.get(settings.discord_channel).send("Stream starded - " + date.format(now, 'DD/MM/YYYY ') + ("Playlist started"));
-
-
-
+	console.log("Stream ready - Starting live Playlist...." + date.format(now, 'DD/MM/YYYY'));
+		bot.channels.cache.get(settings.discord_channel).send("Stream ready - Starting live Playlist...." + date.format(now, 'DD/MM/YYYY'));
 });
 
 fs.watchFile(playlist, (eventType, filename) => {
-  fs.readFile(playlist, 'utf-8', (err, data) => {
-
-    let lines = data.trim().split("\n")
-    console.log(lines[lines.length - 1])
-	bot.channels.cache.get(settings.discord_channel).send(lines)
-  });
+	readLastLines.read(playlist, 1)
+		.then((lines) => console.log(lines) + bot.channels.cache.get(settings.discord_channel).send(lines));
 });
-
 
 bot.login(settings.bot_token);

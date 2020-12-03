@@ -41,8 +41,9 @@ node_modules/
 offline/
 jspm_packages/
 
-# Settings Files
+# Settings / Backup Files
 settings.js
+backup.js
 
 # TypeScript v1 declaration files
 typings/
