@@ -14,7 +14,7 @@
   "author": "KayPure",
   "license": "ISC",
   "dependencies": {
-    "date-and-time": "^0.14.1",
+    "date-and-time": "^0.14.2",
     "discord.js": "^12.5.1",
     "fs": "^0.0.1-security",
     "read-last-lines": "^1.7.2"
